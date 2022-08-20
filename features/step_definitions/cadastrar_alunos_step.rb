@@ -1,0 +1,23 @@
+Dado('que estou na página de cadastro de aluno') do
+  visit new_aluno_path
+
+end
+
+Quando('preencho o campo {string} com {string}') do |string, string2|
+  fill_in string, :with => string2  
+end
+
+Quando('clico em salvar') do
+  click_on 'Salvar novo aluno'
+end
+
+Então('ele deve ter sido salvo no banco de dados') do
+  aluno = Aluno.order("id").last
+  expect(aluno.nome).to eq('Miguel Vasconcelos')
+  expect(aluno.email).to eq('miguel.vasconcelos@usp.br') 
+end
+
+Então('deverei ver o aluno na página de listagem de alunos') do
+  expect(page).to have_content('Miguel Vasconcelos')
+  expect(page).to have_content('miguel.vasconcelos@usp.br')
+end
