@@ -58,4 +58,8 @@ jobs:
           RAILS_MASTER_KEY: ${{ secrets.RAILS_MASTER_KEY }}
           PG_USER: postgres
         run: |
-          bin/rails test
+          bundle update --bundler
+          rake db:migrate
+          rspec spec
+          cucumber
+
