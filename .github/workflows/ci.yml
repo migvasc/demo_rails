@@ -59,7 +59,7 @@ jobs:
           PG_USER: postgres
         run: |
           bundle update --bundler
-          rake db:migrate
-          rspec spec
-          cucumber
+          bundle exec rake db:migrate
+          bundle exec rspec spec
+          bundle exec cucumber
 
