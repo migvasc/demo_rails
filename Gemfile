@@ -40,7 +40,6 @@ gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", require: false
 
-gem 'coveralls', require: false
 
 # Use Sass to process CSS
 # gem "sassc-rails"
@@ -57,6 +56,8 @@ group :development, :test do
   gem 'database_cleaner'
   # Use sqlite3 as the database for Active Record
   gem "sqlite3", "~> 1.4"
+  gem 'coveralls', require: false
+
 
 end
 
