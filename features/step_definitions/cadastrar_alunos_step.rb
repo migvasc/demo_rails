@@ -1,5 +1,7 @@
 Dado('que estou na página de cadastro de aluno') do
   visit new_aluno_path
+  expect(page).to have_content('Novo aluno')
+
 
 end
 
