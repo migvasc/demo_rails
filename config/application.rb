@@ -19,6 +19,9 @@ module TESTE
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
     config.hosts << 'www.example.com'
+    config.hosts << 'demorails2022.herokuapp.com'
+
+    
 
   end
 end
