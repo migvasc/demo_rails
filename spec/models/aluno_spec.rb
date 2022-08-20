@@ -1,5 +1,22 @@
 require 'rails_helper'
 
 RSpec.describe Aluno, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  it 'invalido sem nome' do
+    aluno = Aluno.new
+    aluno.email = "teste@gmail.com"
+    expect(aluno).not_to be_valid
+  end
+  it 'invalido sem email' do
+    a = Aluno.new
+    a.nome = "teste@gmail.com"
+    expect(a).not_to be_valid
+  end
+
+  it 'invalido com email com formato invalido' do
+    a = Aluno.new
+    a.nome= "joao" 
+    a.email = "a,@gmail.com"    
+    expect(a).not_to be_valid
+  end
+
 end

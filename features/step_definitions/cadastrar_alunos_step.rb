@@ -21,3 +21,11 @@ Então('deverei ver o aluno na página de listagem de alunos') do
   expect(page).to have_content('Miguel Vasconcelos')
   expect(page).to have_content('miguel.vasconcelos@usp.br')
 end
+
+Quando('deixo o campo {string} vazio') do |string|
+  fill_in string, :with => ""
+end
+
+Então('deverei ver a mensagem de erro {string}') do |string|
+  expect(page).to have_content(string)
+end
