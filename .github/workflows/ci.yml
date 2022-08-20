@@ -59,17 +59,3 @@ jobs:
           PG_USER: postgres
         run: |
           bin/rails test
-
-  Deploy:
-    if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/master' }}
-    needs: Test
-    runs-on: ubuntu-latest
-
-    steps:
-      - uses: actions/checkout@master
-      - name: Deploy To Heroku
-        uses: akhileshns/heroku-deploy@v3.6.8 # This is the action
-        with:
-          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
-          heroku_app_name: "demorails2022" #Must be unique in Heroku
-          heroku_email: "miguel.felipesilva@gmail.com"
