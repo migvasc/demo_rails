@@ -18,7 +18,7 @@ module TESTE
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
-    config.hosts << "360e4a16f7ad409085652ea86fe022ee.vfs.cloud9.us-east-1.amazonaws.com"
+    config.hosts << 'www.example.com'
 
   end
 end
