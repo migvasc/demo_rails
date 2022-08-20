@@ -56,7 +56,6 @@ jobs:
         env:
           RAILS_ENV: test
           RAILS_MASTER_KEY: ${{ secrets.RAILS_MASTER_KEY }}
-          PG_USER: postgres
         run: |
           bundle update --bundler
           bundle exec rake db:migrate
