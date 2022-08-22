@@ -57,7 +57,7 @@ group :development, :test do
   gem 'database_cleaner'
   # Use sqlite3 as the database for Active Record
   gem "sqlite3", "~> 1.4"
-  gem 'coveralls', require: false
+#  gem 'coveralls', require: false
 
 
 end
