@@ -1,24 +1,3 @@
-# README
+[![Maintainability](https://api.codeclimate.com/v1/badges/4d5ad33994cbbfa738db/maintainability)](https://codeclimate.com/github/migvasc/demo_rails/maintainability)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+[![Coverage Status](https://coveralls.io/repos/github/migvasc/demo_rails/badge.svg?branch=master)](https://coveralls.io/github/migvasc/demo_rails?branch=master)
