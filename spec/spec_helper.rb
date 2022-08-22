@@ -1,5 +1,6 @@
+#require 'simplecov'
+#require 'simplecov-lcov'
 if ENV['COVERAGE'] == 'true'
-#  require 'coveralls'
   require 'simplecov'
   require 'simplecov-lcov'
 
