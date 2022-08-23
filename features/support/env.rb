@@ -6,6 +6,19 @@
 
 require 'cucumber/rails'
 
+require 'simplecov'
+require 'simplecov-lcov'
+
+SimpleCov::Formatter::LcovFormatter.config do |config|
+  config.report_with_single_file = true
+  config.lcov_file_name = 'lcov.info'
+end
+
+SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new([
+  SimpleCov::Formatter::LcovFormatter
+])
+
+SimpleCov.start
 # frozen_string_literal: true
 
 # Capybara defaults to CSS3 selectors rather than XPath.

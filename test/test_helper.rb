@@ -1,5 +1,17 @@
-require 'coveralls'
-Coveralls.wear!
+
+require 'simplecov'
+require 'simplecov-lcov'
+
+SimpleCov::Formatter::LcovFormatter.config do |config|
+  config.report_with_single_file = true
+  config.lcov_file_name = 'lcov.info'
+end
+
+SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new([
+  SimpleCov::Formatter::LcovFormatter
+])
+
+SimpleCov.start
 
 ENV["RAILS_ENV"] ||= "test"
 require_relative "../config/environment"

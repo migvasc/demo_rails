@@ -57,7 +57,9 @@ group :development, :test do
   gem 'database_cleaner'
   # Use sqlite3 as the database for Active Record
   gem "sqlite3", "~> 1.4"
-#  gem 'coveralls', require: false
+  gem 'simplecov',      require: false
+  gem 'simplecov-lcov', require: false
+
 
 
 end
@@ -78,7 +80,5 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
   gem "webdrivers"
-  gem 'simplecov',      require: false
-  gem 'simplecov-lcov', require: false
 
 end

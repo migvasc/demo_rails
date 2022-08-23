@@ -1,25 +1,17 @@
-#require 'simplecov'
-#require 'simplecov-lcov'
-if ENV['COVERAGE'] == 'true'
-  require 'simplecov'
-  require 'simplecov-lcov'
 
-  if ENV['CI'] == 'true'
-    SimpleCov::Formatter::LcovFormatter.config do |config|
-      config.report_with_single_file = true
-      config.lcov_file_name = 'lcov.info'
-    end
+require 'simplecov'
+require 'simplecov-lcov'
 
-    SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new([
-      SimpleCov::Formatter::LcovFormatter,
-      Coveralls::SimpleCov::Formatter
-    ])
-  else
-    SimpleCov.formatter = SimpleCov::Formatter::HTMLFormatter
-  end
-
-  SimpleCov.start('rails')
+SimpleCov::Formatter::LcovFormatter.config do |config|
+  config.report_with_single_file = true
+  config.lcov_file_name = 'lcov.info'
 end
+
+SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new([
+  SimpleCov::Formatter::LcovFormatter
+])
+
+SimpleCov.start
 
 #For coveralls
 #require 'coveralls'
