@@ -1,7 +1,7 @@
 databases:
-  - name: TESTE
-    databaseName: TESTE
-    user: TESTE
+  - name: Testing
+    databaseName: testing_ilbp
+    user: testing_ilbp_user
 
 services:
   - type: web
