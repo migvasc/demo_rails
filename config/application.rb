@@ -20,8 +20,8 @@ module TESTE
     # config.eager_load_paths << Rails.root.join("extras")
     config.hosts << 'www.example.com'
     config.hosts << 'demorails2022.herokuapp.com'
+    config.hosts << 'demo-rails.onrender.com'
 
-    
 
   end
 end
